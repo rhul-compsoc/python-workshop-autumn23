@@ -21,4 +21,4 @@ and to run your socket client run `$ python3`
 
 2. `$ pip install -r flask/requirements`.
 
-3. To run your flask code `$ python3 flash/main.py`
+3. To run your flask code `$ python3 flask/main.py`
