@@ -53,6 +53,7 @@ def get_result(one, two):
         # If an unrecognised argument we want to status 400
         return Response(status=400)
 
+
 # A better example of a GET request using parameters and arguments.
 @app.route('/echo/<str>', methods=['GET'])
 def get_echo(str):
