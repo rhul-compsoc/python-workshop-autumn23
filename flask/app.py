@@ -1,6 +1,7 @@
 from flask import Flask, request
 from flask import Response
 
+
 app = Flask(__name__)
 
 
@@ -51,6 +52,18 @@ def get_result(one, two):
     else:
         # If an unrecognised argument we want to status 400
         return Response(status=400)
+
+# A better example of a GET request using parameters and arguments.
+@app.route('/echo/<str>', methods=['GET'])
+def get_echo(str):
+    # Get flip argument
+    flip = request.args.get('flip')
+
+    # If flip is true then return reversed.
+    if flip == 'true':
+        return reversed(str)
+    else:
+        return str
 
 
 def run():
